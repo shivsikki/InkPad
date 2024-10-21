@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/system_control_activated_dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="iNkPaD"
+        app:titleTextAppearance="@style/ToolbarTitleText"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:targetApi="upside_down_cake" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/slideshow"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardCornerRadius="15dp"
+        android:elevation="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ViewFlipper
+                android:id="@+id/viewFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoStart="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/todo_photo"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/reminder_photo"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/memories_photo"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/notes_photo"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/p_info_photo"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dairy_photo"
+                    android:scaleType="fitXY" />
+
+            </ViewFlipper>
+
+            <LinearLayout
+                android:id="@+id/dotsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@id/viewFlipper"
+                app:layout_constraintStart_toStartOf="@id/viewFlipper"
+                app:layout_constraintEnd_toEndOf="@id/viewFlipper"
+                android:layout_marginBottom="12dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/slideshow"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/try_feature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Try out some of our features..."
+                android:textSize="26sp"
+                android:fontFamily="@font/pacifo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingTop="30dp"/>
+
+            <LinearLayout
+                android:id="@+id/row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/try_feature"
+                app:layout_constraintVertical_bias="0.658">
+
+                <Button
+                    android:id="@+id/todoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_border"
+                    android:drawableTop="@drawable/todo"
+                    android:drawablePadding="10dp"
+                    android:padding="16dp"
+                    android:text="ToDo"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/system_accent2_500" />
+
+                <Button
+                    android:id="@+id/diaryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_border"
+                    android:drawableTop="@drawable/diary"
+                    android:drawablePadding="10dp"
+                    android:padding="16dp"
+                    android:text="Diary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/system_accent2_500"  />
+
+                <Button
+                    android:id="@+id/reminderButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_border"
+                    android:drawableTop="@drawable/reminder"
+                    android:drawablePadding="10dp"
+                    android:padding="16dp"
+                    android:text="Reminder"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/system_accent2_500"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/row1"
+                app:layout_constraintVertical_bias="0.188">
+
+                <Button
+                    android:id="@+id/memoriesButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_border"
+                    android:drawableTop="@drawable/memories"
+                    android:drawablePadding="10dp"
+                    android:padding="16dp"
+                    android:textSize="14sp"
+                    android:text="Memories"
+                    android:textColor="@android:color/system_accent2_500"
+                    android:textStyle="bold"
+                    />
+
+                <Button
+                    android:id="@+id/notesButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_border"
+                    android:padding="16dp"
+                    android:textSize="14sp"
+                    android:text="Notes"
+                    android:textColor="@android:color/system_accent2_500"
+                    android:textStyle="bold"
+                    android:drawableTop="@drawable/notes"
+                    android:drawablePadding="10dp"
+                     />
+
+                <Button
+                    android:id="@+id/p_infoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_border"
+                    android:padding="16dp"
+                    android:text="P_Info"
+                    android:textColor="@android:color/system_accent2_500"
+                    android:textStyle="bold"
+                    android:drawableTop="@drawable/p_info"
+                    android:drawablePadding="10dp"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/row2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="-40dp"
+                android:src="@drawable/more_features" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settingsMenu"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/setting_menu"
+        android:padding="16dp"
+        android:translationX="250dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="15dp">
+
+        <ImageView
+            android:id="@+id/userprofile"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/setting_profile"
+            android:background="@drawable/image_corners"
+            android:clipToOutline="true"
+            android:elevation="15dp"/>
+
+        <TextView
+            android:id="@+id/userID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/userprofile"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="UserID"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold|italic"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/emailID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/userID"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="EmailID"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold|italic"
+            android:textSize="15sp"/>
+
+        <View
+            android:id="@+id/horizontal_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/gray"
+            android:translationZ="2dp"
+            android:layout_marginEnd="-30dp"
+            app:layout_constraintTop_toBottomOf="@id/emailID"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/aboutUsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:drawableRight="@drawable/about_us"
+            android:background="@android:color/transparent"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="About Us"/>
+
+        <View
+            android:id="@+id/horizontal_line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/gray"
+            android:layout_marginEnd="-30dp"
+            android:translationZ="2dp"
+            app:layout_constraintTop_toBottomOf="@id/aboutUsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_line2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:drawableRight="@drawable/logout"
+            android:background="@android:color/transparent"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            android:text="Logout"/>
+
+        <View
+            android:id="@+id/horizontal_line3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/gray"
+            android:layout_marginEnd="-30dp"
+            android:translationZ="2dp"
+            app:layout_constraintTop_toBottomOf="@id/logoutButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

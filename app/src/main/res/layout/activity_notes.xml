@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".notes.NotesActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerview"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:scrollbars="vertical">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/no_notes_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No notes saved"
+        android:textSize="20sp"
+        android:fontFamily="@font/pacifo"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/system_control_activated_dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:targetApi="upside_down_cake">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:fontFamily="@font/marker"
+            android:textColor="@color/white" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/createnotesbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/add1"
+        android:background="?attr/colorPrimary"
+        app:maxImageSize="40dp">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/back_home"
+        android:text="Back"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="onBackButtonClick"
+        android:textColor="#211C1C"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:backgroundTint="#F0A7A7"
+        android:visibility="gone"/>
+
+</RelativeLayout>
