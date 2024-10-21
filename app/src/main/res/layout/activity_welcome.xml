@@ -286,6 +286,7 @@
             app:layout_constraintTop_toBottomOf="@id/userprofile"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="UserID"
+            android:textColor="#003549"
             android:layout_marginRight="10dp"
             android:textStyle="bold|italic"
             android:textSize="20sp"/>
@@ -297,6 +298,7 @@
             app:layout_constraintTop_toBottomOf="@id/userID"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="EmailID"
+            android:textColor="#003549"
             android:layout_marginRight="10dp"
             android:textStyle="bold|italic"
             android:textSize="15sp"/>
