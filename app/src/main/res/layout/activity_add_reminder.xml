@@ -60,6 +60,7 @@
                         android:layout_height="wrap_content"
                         android:text="Name:"
                         android:textStyle="bold"
+                        style="@style/TextColor1"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" />
@@ -83,6 +84,7 @@
                         android:text="Message:"
                         android:textStyle="bold"
                         android:layout_marginTop="18dp"
+                        style="@style/TextColor1"
                         app:layout_constraintTop_toBottomOf="@id/edit_text_name"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" />
@@ -129,7 +131,8 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        style="@style/TextColor1"/>
 
                     <TimePicker
                         android:id="@+id/time_picker"
@@ -170,7 +173,8 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        style="@style/TextColor1"/>
 
                     <DatePicker
                         android:id="@+id/date_picker"

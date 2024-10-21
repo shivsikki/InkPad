@@ -150,7 +150,7 @@
                     android:text="ToDo"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    android:textColor="@android:color/system_accent2_500" />
+                    style="@style/TextColor1"/>
 
                 <Button
                     android:id="@+id/diaryButton"
@@ -164,7 +164,7 @@
                     android:text="Diary"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    android:textColor="@android:color/system_accent2_500"  />
+                    style="@style/TextColor1"/>
 
                 <Button
                     android:id="@+id/reminderButton"
@@ -177,7 +177,7 @@
                     android:padding="16dp"
                     android:text="Reminder"
                     android:textSize="14sp"
-                    android:textColor="@android:color/system_accent2_500"
+                    style="@style/TextColor1"
                     android:textStyle="bold"
                     />
 
@@ -207,7 +207,7 @@
                     android:padding="16dp"
                     android:textSize="14sp"
                     android:text="Memories"
-                    android:textColor="@android:color/system_accent2_500"
+                    style="@style/TextColor1"
                     android:textStyle="bold"
                     />
 
@@ -220,7 +220,7 @@
                     android:padding="16dp"
                     android:textSize="14sp"
                     android:text="Notes"
-                    android:textColor="@android:color/system_accent2_500"
+                    style="@style/TextColor1"
                     android:textStyle="bold"
                     android:drawableTop="@drawable/notes"
                     android:drawablePadding="10dp"
@@ -234,7 +234,7 @@
                     android:background="@drawable/button_border"
                     android:padding="16dp"
                     android:text="P_Info"
-                    android:textColor="@android:color/system_accent2_500"
+                    style="@style/TextColor1"
                     android:textStyle="bold"
                     android:drawableTop="@drawable/p_info"
                     android:drawablePadding="10dp"

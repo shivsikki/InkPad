@@ -4,4 +4,5 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+    <style name="TextColor1"><item name="android:textColor">#E0F3FF</item></style>
 </resources>
